@@ -1,0 +1,8 @@
+#!/bin/bash
+rm -rf config
+rm -f config.cache
+mkdir -p config
+mkdir -p inc
+libtoolize
+aclocal && autoheader && autoconf && automake --add-missing && ./configure
+exit
